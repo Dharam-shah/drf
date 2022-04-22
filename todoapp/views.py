@@ -5,6 +5,8 @@ from .serializers import TodoAppSearilizers
 # from rest_framework.generics import GenericAPIView
 # from rest_framework.mixins import ListModelMixin,CreateModelMixin,RetrieveModelMixin,UpdateModelMixin,DestroyModelMixin
 from rest_framework import viewsets
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 
@@ -40,3 +42,5 @@ from rest_framework import viewsets
 class TodoAppCRUD(viewsets.ModelViewSet):
     queryset = TodoApp.objects.all()
     serializer_class = TodoAppSearilizers
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
