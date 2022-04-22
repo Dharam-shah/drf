@@ -14,7 +14,7 @@ from rest_framework import viewsets
 """List and Create"""
 # class TodoAppLC(GenericAPIView, ListModelMixin, CreateModelMixin):
 #     queryset = TodoApp.objects.all()
-#     serializer_class = TodoAppSearilizers
+#     serializer_class = TodoAppSearilizers  
 
 #     def get(self, request, *args, **kwargs):
 #         return self.list(request, *args, **kwargs)
